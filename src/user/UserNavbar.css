@@ -1,0 +1,35 @@
+.user-navbar {
+  width: 100%;
+  height: 64px;
+  background: #fff;
+  box-shadow: 0 2px 8px #0001;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.user-navbar-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1976d2;
+  letter-spacing: 1px;
+}
+.user-navbar-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.user-navbar-avatar {
+  font-size: 1.5rem;
+  background: #e3f2fd;
+  border-radius: 50%;
+  padding: 6px 10px;
+}
+.user-navbar-name {
+  font-size: 1.08rem;
+  color: #232323;
+  font-weight: 500;
+}

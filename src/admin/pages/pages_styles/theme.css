@@ -1,0 +1,471 @@
+/* Theme CSS - Global theme variables and styles */
+
+:root {
+  /* Light theme (default) */
+  --color-bg: #ffffff;
+  --color-bg-secondary: #f8fafc;
+  --color-bg-tertiary: #f1f5f9;
+  --color-text: #1e293b;
+  --color-text-secondary: #64748b;
+  --color-text-muted: #94a3b8;
+  --color-border: #e2e8f0;
+  --color-border-light: #f1f5f9;
+  --color-primary: #3b82f6;
+  --color-primary-hover: #2563eb;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-card: #ffffff;
+  --color-sidebar: #f8fafc;
+  --color-navbar: #ffffff;
+  --color-input: #ffffff;
+  --color-input-border: #d1d5db;
+  --color-input-focus: #3b82f6;
+  --color-button: #ffffff;
+  --color-button-hover: #f9fafb;
+  --color-button-primary: #3b82f6;
+  --color-button-primary-hover: #2563eb;
+  --color-button-primary-text: #ffffff;
+  --color-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  --color-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --color-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --color-overlay: rgba(0, 0, 0, 0.5);
+  --color-scrollbar: #cbd5e1;
+  --color-scrollbar-thumb: #94a3b8;
+  --color-scrollbar-track: #f1f5f9;
+}
+
+[data-theme="dark"] {
+  /* Dark theme */
+  --color-bg: #0f172a;
+  --color-bg-secondary: #1e293b;
+  --color-bg-tertiary: #334155;
+  --color-text: #f8fafc;
+  --color-text-secondary: #cbd5e1;
+  --color-text-muted: #94a3b8;
+  --color-border: #334155;
+  --color-border-light: #1e293b;
+  --color-primary: #60a5fa;
+  --color-primary-hover: #3b82f6;
+  --color-success: #34d399;
+  --color-warning: #fbbf24;
+  --color-error: #f87171;
+  --color-card: #1e293b;
+  --color-sidebar: #0f172a;
+  --color-navbar: #1e293b;
+  --color-input: #1e293b;
+  --color-input-border: #475569;
+  --color-input-focus: #60a5fa;
+  --color-button: #1e293b;
+  --color-button-hover: #334155;
+  --color-button-primary: #60a5fa;
+  --color-button-primary-hover: #3b82f6;
+  --color-button-primary-text: #0f172a;
+  --color-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  --color-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  --color-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+  --color-overlay: rgba(0, 0, 0, 0.7);
+  --color-scrollbar: #475569;
+  --color-scrollbar-thumb: #64748b;
+  --color-scrollbar-track: #1e293b;
+}
+
+/* Global theme transitions */
+* {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Body and root theme classes */
+body.theme-light {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+body.theme-dark {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* App container */
+.app {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+}
+
+/* Main content area */
+.main-content {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.content {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* Sidebar theming */
+.sidebar-root {
+  background-color: var(--color-sidebar) !important;
+  color: var(--color-text) !important;
+  border-right: 1px solid var(--color-border);
+}
+
+.sidebar-menu-item button {
+  color: var(--color-text);
+}
+
+.sidebar-menu-btn:hover {
+  background-color: var(--color-bg-secondary);
+}
+
+.sidebar-menu-btn.selected {
+  background-color: var(--color-primary);
+  color: var(--color-button-primary-text);
+}
+
+.sidebar-icon-highlight {
+  color: var(--color-text);
+}
+
+.sidebar-icon-highlight.active {
+  background-color: var(--color-primary);
+  color: var(--color-button-primary-text);
+}
+
+.sidebar-divider {
+  border-color: var(--color-border);
+}
+
+.sidebar-logout-btn {
+  background-color: var(--color-error);
+  color: var(--color-button-primary-text);
+}
+
+.sidebar-logout-btn:hover {
+  background-color: #dc2626;
+}
+
+/* Navbar theming */
+.navbar-root {
+  background-color: var(--color-navbar) !important;
+  color: var(--color-text) !important;
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--color-shadow);
+}
+
+.navbar-brand {
+  color: var(--color-text);
+}
+
+.navbar-title {
+  color: var(--color-text);
+}
+
+.navbar-search-input {
+  background-color: var(--color-input);
+  color: var(--color-text);
+  border: 1px solid var(--color-input-border);
+}
+
+.navbar-search-input:focus {
+  border-color: var(--color-input-focus);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.navbar-search-btn {
+  background-color: var(--color-primary);
+  color: var(--color-button-primary-text);
+}
+
+.navbar-search-btn:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.navbar-theme-toggle {
+  background-color: var(--color-button);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.navbar-theme-toggle:hover {
+  background-color: var(--color-button-hover);
+}
+
+.navbar-user-info {
+  color: var(--color-text);
+}
+
+.navbar-username {
+  color: var(--color-text);
+}
+
+.navbar-dropdown {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--color-shadow-lg);
+}
+
+.dropdown-header {
+  background-color: var(--color-bg-secondary);
+}
+
+.dropdown-username {
+  color: var(--color-text);
+}
+
+.dropdown-role {
+  color: var(--color-text-secondary);
+}
+
+.dropdown-email {
+  color: var(--color-text-muted);
+}
+
+.dropdown-item {
+  color: var(--color-text);
+}
+
+.dropdown-item:hover {
+  background-color: var(--color-bg-secondary);
+}
+
+.dropdown-item.logout {
+  color: var(--color-error);
+}
+
+.dropdown-item.logout:hover {
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+.dropdown-divider {
+  border-color: var(--color-border);
+}
+
+/* Card theming */
+.card, .dashboard-card {
+  background-color: var(--color-card) !important;
+  color: var(--color-text) !important;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--color-shadow);
+}
+
+.card:hover, .dashboard-card:hover {
+  box-shadow: var(--color-shadow-lg);
+}
+
+/* Button theming */
+.button, .btn, .dashboard-menu-btn {
+  background-color: var(--color-button) !important;
+  color: var(--color-text) !important;
+  border: 1px solid var(--color-border);
+}
+
+.button:hover, .btn:hover, .dashboard-menu-btn:hover {
+  background-color: var(--color-button-hover);
+}
+
+.button.primary, .btn.primary {
+  background-color: var(--color-button-primary) !important;
+  color: var(--color-button-primary-text) !important;
+}
+
+.button.primary:hover, .btn.primary:hover {
+  background-color: var(--color-button-primary-hover) !important;
+}
+
+/* Input theming */
+input, textarea, select {
+  background-color: var(--color-input);
+  color: var(--color-text);
+  border: 1px solid var(--color-input-border);
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--color-input-focus);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Table theming */
+table {
+  background-color: var(--color-card);
+  color: var(--color-text);
+}
+
+th {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+td {
+  border-color: var(--color-border);
+}
+
+tr:hover {
+  background-color: var(--color-bg-secondary);
+}
+
+/* Modal theming */
+.modal-overlay {
+  background-color: var(--color-overlay);
+}
+
+.modal-content {
+  background-color: var(--color-card);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--color-shadow-xl);
+}
+
+.modal-header {
+  border-bottom-color: var(--color-border);
+}
+
+.modal-footer {
+  border-top-color: var(--color-border);
+}
+
+/* Form theming */
+.form-group label {
+  color: var(--color-text);
+}
+
+.form-control {
+  background-color: var(--color-input);
+  color: var(--color-text);
+  border-color: var(--color-input-border);
+}
+
+.form-control:focus {
+  border-color: var(--color-input-focus);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Alert theming */
+.alert {
+  border: 1px solid var(--color-border);
+}
+
+.alert-success {
+  background-color: rgba(16, 185, 129, 0.1);
+  border-color: var(--color-success);
+  color: var(--color-success);
+}
+
+.alert-warning {
+  background-color: rgba(245, 158, 11, 0.1);
+  border-color: var(--color-warning);
+  color: var(--color-warning);
+}
+
+.alert-error {
+  background-color: rgba(239, 68, 68, 0.1);
+  border-color: var(--color-error);
+  color: var(--color-error);
+}
+
+/* Badge theming */
+.badge {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-secondary);
+}
+
+.badge-primary {
+  background-color: var(--color-primary);
+  color: var(--color-button-primary-text);
+}
+
+.badge-success {
+  background-color: var(--color-success);
+  color: var(--color-button-primary-text);
+}
+
+.badge-warning {
+  background-color: var(--color-warning);
+  color: var(--color-button-primary-text);
+}
+
+.badge-error {
+  background-color: var(--color-error);
+  color: var(--color-button-primary-text);
+}
+
+/* Scrollbar theming */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-scrollbar-thumb);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-scrollbar);
+}
+
+/* Login page theming */
+.login-container {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.login-box {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--color-shadow-lg);
+}
+
+.login-button {
+  background-color: var(--color-button-primary);
+  color: var(--color-button-primary-text);
+}
+
+.login-button:hover {
+  background-color: var(--color-button-primary-hover);
+}
+
+/* Dashboard theming */
+.dashboard-header {
+  background-color: var(--color-bg) !important;
+  color: var(--color-text) !important;
+}
+
+.dashboard-title {
+  color: var(--color-text) !important;
+}
+
+.dashboard-subtitle {
+  color: var(--color-text-secondary) !important;
+}
+
+.dashboard-sidebar {
+  background-color: var(--color-sidebar) !important;
+  color: var(--color-text) !important;
+}
+
+/* Utility classes */
+.text-highlight {
+  color: var(--color-primary);
+}
+
+.icon {
+  color: var(--color-primary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar-root {
+    box-shadow: var(--color-shadow-lg);
+  }
+  
+  .navbar-dropdown {
+    box-shadow: var(--color-shadow-xl);
+  }
+} 

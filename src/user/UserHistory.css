@@ -1,0 +1,13 @@
+.user-history-card {
+  background: #f7f7f7;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 4px #0001;
+  margin-bottom: 24px;
+}
+.user-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #232323;
+  margin-bottom: 18px;
+}

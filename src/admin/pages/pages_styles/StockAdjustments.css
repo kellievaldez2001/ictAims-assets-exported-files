@@ -1,0 +1,38 @@
+/* Match Stock Adjustments header to Asset Acquisitions header */
+.stock-adjustments-header span {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #393E46;
+}
+.stock-adjustments-root { padding: 24px; }
+.stock-adjustments-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; }
+
+/* Floating Action Button for Add Stock Adjustment */
+.stock-adjustments-fab {
+  position: fixed;
+  right: 36px;
+  bottom: 36px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #2196f3;
+  color: #fff;
+  font-size: 2.2rem;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 100;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.stock-adjustments-fab:hover {
+  background: #1565c0;
+  box-shadow: 0 4px 16px rgba(33,150,243,0.18);
+}
+.stock-adjustments-table-wrapper { overflow-x: auto; }
+.stock-adjustments-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 6px; box-shadow: 0 1px 4px rgba(0,0,0,0.03); }
+.stock-adjustments-table th, .stock-adjustments-table td { padding: 10px 8px; border: 1px solid #eee; text-align: left; }
+.stock-adjustments-table th { background: #eaefef; color: #393E46; font-weight: 600; }
+.stock-adjustments-table tbody tr:hover { background: #f5f7fa; }

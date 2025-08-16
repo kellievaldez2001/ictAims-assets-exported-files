@@ -1,0 +1,93 @@
+.settings-popup {
+  position: absolute;
+  top: 65px;
+  right: 345px;
+  z-index: 9999;
+}
+.settings-popup-arrow {
+  position: absolute;
+  top: -9px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 0 solid transparent;
+  border-bottom: 12px solid #fff;
+  z-index: 10000;
+}
+.settings-popup-box {
+  background: #fff;
+  border-radius: 14px 0 14px 14px;
+  box-shadow: 0 2px 12px #0002;
+  min-width: 220px;
+  max-width: 260px;
+  padding: 10px 0 6px 0;
+  border: 1px solid #eee;
+  margin-top: 0;
+}
+.settings-popup-title {
+  font-weight: 800;
+  font-size: 1.5rem;
+  padding: 0 24px 12px 24px;
+  border-bottom: 1px solid #eee;
+}
+.settings-popup-menu-item {
+  font-size: 0.8rem;
+  padding: 12px 24px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.15s;
+  cursor: pointer;
+}
+.settings-popup-menu-item:last-child {
+  border-bottom: none;
+}
+.settings-popup-menu-item:hover {
+  background: #e3f2fd;
+}
+.settings-popup-section {
+  padding: 12px 18px;
+}
+.settings-btn-outline {
+  width: 100%;
+  margin-bottom: 8px;
+}
+.settings-btn-primary {
+  width: 100%;
+  margin-bottom: 8px;
+}
+.settings-btn-text {
+  width: 100%;
+}
+button.settings-btn-outline {
+  background: #fff !important;
+  color: #1976d2 !important;
+  border: 2px solid #1976d2 !important;
+  border-radius: 6px !important;
+  padding: 8px 0 !important;
+  font-weight: 600 !important;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+button.settings-btn-outline:hover {
+  background: #e3f2fd !important;
+  color: #1565c0 !important;
+}
+button.settings-btn-primary {
+  background: #e3f2fd !important;
+  color: #1976d2 !important;
+  border: 2px solid #1976d2 !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  padding: 10px 0 !important;
+  margin-bottom: 12px !important;
+  width: 100% !important;
+  cursor: pointer;
+  transition: background 0.2s !important;
+}
+button.settings-btn-primary:hover,
+button.settings-btn-primary:active {
+  background: #bbdefb !important;
+}

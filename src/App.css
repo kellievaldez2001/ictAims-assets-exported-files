@@ -1,0 +1,131 @@
+/*
+  Custom styles for App.js (root layout, light/dark mode)
+  + General responsive layout for all pages
+  + Global styles for background, font, color, and box-sizing
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
+
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100vh;
+  min-width: 100vw;
+  width: 100vw;
+  height: 100vh;
+  background: var(--color-bg, #fff);
+  color: var(--color-text, #232323);
+  transition: background 0.2s, color 0.2s;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', 'Roboto', Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+main {
+  flex-grow: 1;
+  padding: 0px;
+  margin-top: 88px;
+  max-width: 1400px;
+  margin-left: 220px;
+  margin-right: auto;
+  width: calc(100vw - 220px);
+  box-sizing: border-box;
+  animation: slideUpFast 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideUpFast {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* General responsive grid for all pages */
+.responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.responsive-box {
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Login page specific styles */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.login-box {
+  background: var(--color-card);
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.login-box h2 {
+  margin: 0 0 16px 0;
+  color: var(--color-text);
+}
+
+.login-box p {
+  margin: 0 0 32px 0;
+  color: var(--color-text-secondary);
+}
+
+.login-button {
+  background: var(--color-button-primary);
+  color: var(--color-button-primary-text);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.login-button:hover {
+  background: var(--color-button-primary-hover);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+  main {
+    padding: 12px;
+    margin-top: 80px;
+  }
+  .responsive-grid {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 4px;
+    margin-top: 72px;
+  }
+  .responsive-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}

@@ -1,0 +1,263 @@
+/* --- Categories Management Modal Styles (copied from Asset Acquisitions) --- */
+.categories-management-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.18);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.categories-management-modal {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  padding: 32px 32px 24px 32px;
+  min-width: 340px;
+  max-width: 98vw;
+  width: 420px;
+  animation: fadeInModal 0.18s;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.categories-management-modal-header {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #393E46;
+  margin-bottom: 18px;
+  text-align: left;
+}
+.categories-management-modal-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #393E46;
+}
+.categories-management-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.categories-management-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.categories-management-form-group label {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 2px;
+}
+.categories-management-form-group input,
+.categories-management-form-group select {
+  padding: 10px 12px;
+  border: 1px solid #888;
+  border-radius: 8px;
+  font-size: 1.08rem;
+}
+.categories-management-modal-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 18px;
+}
+.categories-management-btn-cancel,
+.categories-management-btn-primary {
+  background: #fff;
+  color: #393E46;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 32px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.categories-management-btn-primary {
+  background: #2196f3;
+  color: #fff;
+}
+.categories-management-btn-cancel:hover {
+  background: #eee;
+}
+.categories-management-btn-primary:hover {
+  background: #1565c0;
+}
+
+/* --- Categories Management Page Styles (copied from Asset Acquisitions) --- */
+.categories-management-root { 
+  padding: 24px; 
+}
+
+.categories-management-header { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  margin-bottom: 5px; 
+}
+
+.categories-management-header span {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #393E46;
+}
+
+.categories-management-table-wrapper { 
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Modern Floating Action Button */
+.categories-management-fab {
+  position: fixed;
+  right: 36px;
+  bottom: 36px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #2196f3;
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.categories-management-fab:hover {
+  background: #1565c0;
+  box-shadow: 0 6px 16px rgba(33, 150, 243, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .categories-management-root {
+    padding: 16px;
+  }
+  
+  .categories-management-header {
+    margin-bottom: 20px;
+  }
+  
+  .categories-management-header span {
+    font-size: 1.5rem;
+  }
+  
+  .categories-management-table-wrapper {
+    padding: 16px;
+  }
+  
+  .categories-management-fab {
+    right: 24px;
+    bottom: 24px;
+    width: 48px;
+    height: 48px;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .categories-management-root {
+    padding: 12px;
+  }
+  
+  .categories-management-header span {
+    font-size: 1.3rem;
+  }
+  
+  .categories-management-table-wrapper {
+    padding: 12px;
+  }
+  
+  .categories-management-fab {
+    right: 16px;
+    bottom: 16px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+  }
+}
+/* Match Categories header to Asset Acquisitions and Stock Adjustments header */
+.categories-header span {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #393E46;
+}
+/* CategoriesManagement.css */
+
+.assets-modal-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.assets-modal-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.assets-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 1.35rem;
+  font-weight: bold;
+  color: #222;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+}
+
+.subcategory-chevron {
+  cursor: pointer;
+  margin-left: 32px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+/* Sub-category dropdown styles for Categories page */
+.categories-subcategory-dropdown {
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 0;
+  padding: 6px 10px;
+  /* Remove position: fixed */
+  /* position: fixed !important; */
+  z-index: 9999 !important;
+  min-width: 120px;
+  max-height: none !important;
+  overflow: visible !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+.categories-subcategory-dropdown-item {
+  padding: 2px 0;
+  font-size: 0.97em;
+  color: #232323;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background 0.15s;
+}
+.categories-subcategory-dropdown-item:hover,
+.categories-subcategory-dropdown-item:active {
+  background: #e3f2fd;
+}
+.categories-subcategory-dropdown::-webkit-scrollbar {
+  display: none;
+}
+
+/* Add more styles as needed for CategoriesManagement */

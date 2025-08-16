@@ -1,0 +1,90 @@
+/* --- Copied and adapted from admin assets.css for full consistency --- */
+.my-assets-container {
+  padding: 32px 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 60vh;
+  background: #f8f9fb;
+}
+
+.my-assets-table-wrapper {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  padding: 32px 32px 24px 32px;
+  min-width: 900px;
+  max-width: 98vw;
+}
+
+.my-assets-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
+}
+
+.my-assets-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 1.05rem;
+  background: transparent;
+}
+
+.my-assets-table th, .my-assets-table td {
+  padding: 10px 14px;
+  text-align: left;
+}
+
+.my-assets-table th {
+  font-weight: 700;
+  font-size: 1.08em;
+  background: #f5f5f5;
+  color: #232323;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.my-assets-table td {
+  border-bottom: 1px solid #ececec;
+  color: #232323;
+}
+
+.my-assets-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Pill styles to match Asset Acquisitions */
+.pill {
+  display: inline-block;
+  padding: 2px 16px;
+  border-radius: 16px;
+  font-size: 1em;
+  font-weight: 600;
+  margin-right: 4px;
+  margin-bottom: 2px;
+  vertical-align: middle;
+}
+.pill.category {
+  background: #8e24aa;
+  color: #fff;
+  border: none;
+}
+.pill.subcategory {
+  background: #f5f5f5;
+  color: #232323;
+  border: 1px solid #e0e0e0;
+}
+
+.status-available { background: #43a047; color: #fff; }
+.status-in\ use { background: #1976d2; color: #fff; }
+.status-maintenance { background: #ffa502; color: #fff; }
+.status-retired { background: #bdbdbd; color: #232323; }
+.status-lost { background: #ff4757; color: #fff; }
+.status-disposed { background: #616161; color: #fff; }
+.status-available { background: #43a047; color: #fff; }
+.status-in\ use { background: #1976d2; color: #fff; }
+.status-maintenance { background: #ffa502; color: #fff; }
+.status-retired { background: #bdbdbd; color: #232323; }
+.status-lost { background: #ff4757; color: #fff; }
+.status-disposed { background: #616161; color: #fff; }

@@ -1,0 +1,365 @@
+/* --- Custodians Page Styles (copied from Asset Acquisitions) --- */
+.custodians-root {
+  padding: 24px;
+}
+
+.custodians-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.custodians-header span {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #393E46;
+}
+
+.custodians-table-wrapper {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Modern Floating Action Button */
+.custodians-fab {
+  position: fixed;
+  right: 36px;
+  bottom: 36px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #2196f3;
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.custodians-fab:hover {
+  background: #1565c0;
+  box-shadow: 0 6px 16px rgba(33, 150, 243, 0.4);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .custodians-root {
+    padding: 16px;
+  }
+  .custodians-header {
+    margin-bottom: 20px;
+  }
+  .custodians-header span {
+    font-size: 1.5rem;
+  }
+  .custodians-table-wrapper {
+    padding: 16px;
+  }
+  .custodians-fab {
+    right: 24px;
+    bottom: 24px;
+    width: 48px;
+    height: 48px;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .custodians-root {
+    padding: 12px;
+  }
+  .custodians-header span {
+    font-size: 1.3rem;
+  }
+  .custodians-table-wrapper {
+    padding: 12px;
+  }
+  .custodians-fab {
+    right: 16px;
+    bottom: 16px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+  }
+}
+/* Match User Management header to Asset Acquisitions and Stock Adjustments header */
+.custodians-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #393E46;
+}
+/*
+  Custom styles for Custodians page (replacing MUI look)
+  - Use .custodians-* className selectors in JSX
+  - Replicate MUI layout, spacing, color, font, and responsiveness
+*/
+
+.custodians-modal {
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px 28px 24px 28px;
+  min-width: 340px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 4px 32px #000a;
+  color: #000;
+  position: relative;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.custodians-header-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.custodians-search-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.custodians-search-input {
+  min-width: 200px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #000;
+  background: #fff;
+  color: #000;
+  font-size: 0.8rem;
+}
+.custodians-filter-select {
+  min-width: 140px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #23293a;
+  background: #fff;
+  color: #000;
+  font-size: 0.8rem;
+}
+.custodians-table-section {
+  border-radius: 0px;
+  box-shadow: 0 4px 16px #0002;
+  padding: 0 0 0 0;
+  width: 100%;
+  min-width: unset;
+  overflow-x:auto;
+}
+.custodians-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.custodians-table-header tr, .custodians-table-header th {
+  padding: 8px 10px;
+  font-size: 0.80rem;
+  background: #393e46;
+  color: #fff;
+  border-top: 3px solid #393e46;
+  border-bottom: 3px solid #393e46;
+}
+.custodians-table-header th {
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: left;
+}
+.custodians-table-header th:last-child,
+.custodians-table-body td:last-child {
+  min-width: 110px;
+  width: 110px;
+  text-align: center;
+}
+.custodians-table-body th, .custodians-table-body td {
+  padding: 1px 15px;
+  font-size: 0.8rem;
+  border-bottom: 1px solid #232323;
+}
+.custodians-table-body th {
+  font-weight: 700;
+  background: #181c24;
+}
+.custodians-table-body tr:last-child td {
+  border-bottom: none;
+}
+.custodians-table tr:hover {
+  background: #0003;
+}
+.custodians-actions-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.custodians-action-btn {
+  background: none;
+  border: none;
+  color: black;
+  width: auto;
+  height: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.custodians-action-btn.edit {
+  color: black;
+}
+.custodians-action-btn:hover {
+  background: none;
+}
+.custodians-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.custodians-modal {
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px 28px 24px 28px;
+  min-width: 340px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 4px 32px #000a;
+  color: #000;
+  position: relative;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+.custodians-modal-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.custodians-modal-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.custodians-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #e0e0e0;
+  color: #000;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1000;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.custodians-modal-close:hover {
+  background: #fff;
+  color: #1976d2;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-color: #1976d2;
+}
+.custodians-form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.custodians-form-group label {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.custodians-form-group input,
+.custodians-form-group select {
+  background: #fff;
+  border: 1px solid #444;
+  border-radius: 5px;
+  color: #000;
+  padding: 8px 10px;
+  font-size: 1rem;
+}
+.custodians-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 175px;
+  margin-top: 18px;
+}
+.custodians-btn-primary {
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 22px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 10px #000;
+}
+.custodians-btn-primary:hover {
+  background: #02a5fc;
+  color: #fff;
+}
+.custodians-btn-cancel {
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 22px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 10px #000;
+}
+.custodians-btn-cancel:hover {
+  background: #000;
+  color: #fff;
+}
+.custodians-fab {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #1976d2;
+  color: #fff;
+  font-size: 2.2rem;
+  border: none;
+  box-shadow: 0 4px 16px #000a;
+  cursor: pointer;
+  z-index: 10010;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+ 
+}
+.custodians-fab:hover {
+  background: #1565c0;
+}
+@media (max-width: 600px) {
+  .custodians-root {
+    padding: 12px 2px 64px 2px;
+  }
+  .custodians-modal {
+    min-width: 90vw;
+    padding: 18px 6px 18px 6px;
+  }
+  .custodians-table th, .custodians-table td {
+    padding: 8px 4px;
+    font-size: 0.95rem;
+  }
+}

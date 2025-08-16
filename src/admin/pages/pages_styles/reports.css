@@ -1,0 +1,165 @@
+/*
+  Custom styles for Reports page (replacing MUI look)
+  - Use .reports-* className selectors in JSX
+  - Replicate MUI layout, spacing, color, font, and responsiveness
+*/
+
+/* Modern card-like, soft, clean style for Reports page */
+.reports-root {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px 32px 0 32px;
+  color: #232323;
+  font-family: 'Inter', 'Roboto', Arial, sans-serif;
+  background: #fafbfc;
+}
+.reports-title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+  color: #222;
+}
+.reports-filters-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 18px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px #0001;
+  padding: 10px 12px;
+}
+
+/* Compact FROM and TO filter fields */
+.reports-date-filter {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #1976d2;
+  border-radius: 6px;
+  padding: 2px 6px;
+  background: #fff;
+  min-width: 120px;
+  max-width: 160px;
+  height: 32px;
+}
+.reports-date-filter span {
+  color: #1976d2;
+  font-weight: 500;
+  font-size: 15px;
+  margin-right: 4px;
+}
+.reports-date-filter input[type="text"] {
+  font-size: 13px;
+  border: none;
+  background: transparent;
+  color: #222;
+  flex: 1;
+  outline: none;
+  padding: 0;
+  min-width: 60px;
+}
+.reports-date-filter button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-left: 4px;
+  cursor: pointer;
+}
+.reports-filter-input {
+  background: #f7f7f7;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  padding: 7px 12px;
+  color: #232323;
+  min-width: 110px;
+  font-size: 1rem;
+  box-shadow: none;
+  outline: none;
+  transition: border 0.15s;
+}
+.reports-filter-input:focus {
+  border: 1.5px solid #1976d2;
+}
+.reports-table-section {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px #0001;
+  overflow-x: auto;
+  margin-top: 12px;
+  padding: 18px 22px;
+}
+.reports-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px #0001;
+}
+.reports-table td {
+  padding: 8px 10px;
+  color: #232323;
+  font-size: 0.97em;
+  font-weight: 500;
+  border-bottom: 1px solid #e0e0e0;
+}
+.reports-table th {
+  background: #f7f7f7;
+  font-weight: 700;
+  font-size: 0.97em;
+  color: #232323;
+  border-bottom: 2px solid #e0e0e0;
+}
+.reports-table tr:hover {
+  background: #f5faff;
+}
+.reports-btn-print {
+  background: none;
+  border: 2px solid #1976d2;
+  color: #1976d2;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+  cursor: pointer;
+  font-size: 1.3rem;
+  transition: background 0.2s;
+}
+.reports-btn-print:hover {
+  background: #e3f2fd;
+}
+.reports-paper {
+  background: #fff;
+  border-radius: 14px;
+  min-height: 480px;
+  padding: 18px 22px;
+  margin-top: 8px;
+  color: #232323;
+  font-family: 'Inter', 'Poppins', Arial, sans-serif;
+  font-size: 1.05rem;
+  box-shadow: 0 1px 4px #0001;
+}
+@media (max-width: 900px) {
+  .reports-root {
+    padding: 12px 2px 64px 2px;
+  }
+  .reports-table th, .reports-table td {
+    padding: 6px 4px;
+    font-size: 0.95rem;
+  }
+  .reports-filters-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 10px 6px;
+  }
+  .reports-table-section {
+    padding: 10px 6px;
+  }
+}

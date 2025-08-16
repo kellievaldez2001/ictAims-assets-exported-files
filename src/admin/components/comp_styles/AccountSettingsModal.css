@@ -1,0 +1,284 @@
+.account-settings-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.account-settings-modal {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.account-settings-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 24px 16px 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.account-settings-modal-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.account-settings-modal-close {
+  background: none;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+  color: #000;
+  padding: 0 10px 0 10px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.account-settings-modal-close:hover {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.account-settings-modal-content {
+  padding: 24px;
+}
+
+/* Tab Navigation */
+.account-settings-tabs {
+  display: flex;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 24px;
+}
+
+.account-settings-tab {
+  background: none;
+  border: none;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.account-settings-tab:hover {
+  color: #374151;
+  background-color: #f9fafb;
+}
+
+.account-settings-tab.active {
+  color: #3b82f6;
+  border-bottom-color: #3b82f6;
+}
+
+/* Tab Content */
+.account-settings-tab-content {
+  min-height: 400px;
+}
+
+.account-settings-section h3 {
+  margin: 0 0 20px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Form Styles */
+.account-settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.account-settings-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.account-settings-field label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.account-settings-field input,
+.account-settings-field select {
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+
+.account-settings-field input:focus,
+.account-settings-field select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Options Styles */
+.account-settings-options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.account-settings-option {
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #f9fafb;
+}
+
+.account-settings-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #111827;
+}
+
+.account-settings-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.checkmark {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #d1d5db;
+  border-radius: 4px;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.account-settings-checkbox input[type="checkbox"]:checked + .checkmark {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.account-settings-checkbox input[type="checkbox"]:checked + .checkmark::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.account-settings-option p {
+  margin: 8px 0 0 32px;
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+/* Action Buttons */
+.account-settings-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.account-settings-btn-primary,
+.account-settings-btn-secondary {
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.account-settings-btn-primary {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.account-settings-btn-primary:hover {
+  background-color: #2563eb;
+}
+
+.account-settings-btn-secondary {
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.account-settings-btn-secondary:hover {
+  background-color: #e5e7eb;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .account-settings-modal {
+    width: 95%;
+    margin: 20px;
+  }
+  
+  .account-settings-modal-header {
+    padding: 20px 20px 12px 20px;
+  }
+  
+  .account-settings-modal-content {
+    padding: 20px;
+  }
+  
+  .account-settings-tabs {
+    flex-direction: column;
+  }
+  
+  .account-settings-tab {
+    text-align: left;
+    border-bottom: none;
+    border-left: 2px solid transparent;
+  }
+  
+  .account-settings-tab.active {
+    border-bottom-color: transparent;
+    border-left-color: #3b82f6;
+  }
+  
+  .account-settings-actions {
+    flex-direction: column;
+  }
+  
+  .account-settings-actions button {
+    width: 100%;
+  }
+} 

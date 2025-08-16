@@ -1,0 +1,2 @@
+// Add MUI DataGrid dependency for table style
+// This file is required for CategoriesManagement.js to use DataGrid like Departments.js

@@ -1,0 +1,229 @@
+
+
+/* Floating actions root */
+.user-floating-actions {
+  position: fixed;
+  top: 16px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  z-index: 1202;
+}
+
+body.theme-dark .user-floating-actions,
+html[data-theme='dark'] .user-floating-actions {
+  background: transparent;
+}
+
+
+/* Profile card */
+.user-profile-card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  padding: 10px 22px 10px 12px;
+  margin-left: 24px;
+  transition: box-shadow 0.2s, border-color 0.2s, background 0.2s;
+  position: relative;
+  min-width: 160px;
+  border: 1px solid #e0e0e0;
+  cursor: pointer;
+}
+body.theme-dark .user-profile-card,
+html[data-theme='dark'] .user-profile-card {
+  background: #000;
+  color: #fff;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.40);
+}
+.user-profile-card:hover {
+  background: #f8f9fa;
+  border-color: #d0d0d0;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+}
+.profile-role {
+  font-size: 12px;
+  color: #888;
+}
+/* Dropdown styles */
+.user-profile-dropdown {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  min-width: 260px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.16);
+  padding: 0;
+  z-index: 100;
+  animation: fadeInDropdown 0.18s ease;
+}
+@keyframes fadeInDropdown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.dropdown-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 20px 10px 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.dropdown-avatar {
+  font-size: 44px;
+  color: #bdbdbd;
+  margin-bottom: 6px;
+}
+.dropdown-name {
+  font-size: 17px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 2px;
+}
+.dropdown-email {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 2px;
+}
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0 10px 0;
+}
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color: #222;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: background 0.13s;
+  gap: 12px;
+}
+.dropdown-item:hover {
+  background: #f5f5f5;
+}
+.dropdown-divider {
+  border: none;
+  border-top: 1px solid #f0f0f0;
+  margin: 4px 0 4px 0;
+}
+.dropdown-item.logout {
+  color: #e53935;
+}
+/* Removed orphaned CSS properties block that was causing errors */
+.profile-avatar {
+  font-size: 1.5rem;
+  color: #1976d2;
+}
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.profile-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #232323;
+}
+.profile-role {
+  font-size: 0.7rem;
+  color: #666;
+}
+
+/* Floating action button styles - applied globally for desktop and mobile */
+
+
+/* Floating action button */
+.user-action-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  background: #fff;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 14px;
+  width: 56px;
+  height: 56px;
+  color: #222;
+  cursor: pointer;
+  transition: box-shadow 0.18s, background 0.13s, border-color 0.13s, transform 0.13s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-size: 13px;
+  outline: none;
+  padding: 0;
+}
+body.theme-dark .user-action-btn,
+html[data-theme='dark'] .user-action-btn {
+  background: #000;
+  color: #fff;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.40);
+}
+.user-action-btn svg {
+  width: 20px;
+  height: 20px;
+  color: #222;
+  stroke: none;
+  display: block;
+}
+body.theme-dark .user-action-btn svg,
+html[data-theme='dark'] .user-action-btn svg {
+  color: #fff;
+}
+.user-action-btn:hover {
+  background: #f5f5f5;
+  border-color: #d0d0d0;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  transform: translateY(-2px);
+}
+.user-action-btn svg {
+  width: 20px;
+  height: 20px;
+  color: #222;
+  stroke: none;
+  display: block;
+}
+.btn-label {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.1;
+  color: #444;
+}
+body.theme-dark .btn-label,
+html[data-theme='dark'] .btn-label {
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .user-floating-actions {
+    top: 8px;
+    right: 4px;
+    gap: 4px;
+  }
+  .user-action-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 10px;
+  }
+  .user-action-btn svg {
+    width: 15px;
+    height: 15px;
+  }
+  .btn-label {
+    font-size: 9px;
+  }
+  .user-profile-card {
+    padding: 6px 8px;
+    min-width: 90px;
+  }
+}

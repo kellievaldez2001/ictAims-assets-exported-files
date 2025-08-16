@@ -1,0 +1,111 @@
+.add-custodian-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-custodian-modal {
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px 28px 24px 28px;
+  min-width: 340px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 4px 32px #000a;
+  color: #000;
+  position: relative;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+.add-custodian-modal-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.add-custodian-modal-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.add-custodian-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #e0e0e0;
+  color: #000;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1000;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.add-custodian-modal-close:hover {
+  background: #fff;
+  color: #1976d2;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-color: #1976d2;
+}
+.add-custodian-form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.add-custodian-form-group label {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.add-custodian-form-group input,
+.add-custodian-form-group select {
+  background: #fff;
+  border: 1px solid #444;
+  border-radius: 5px;
+  color: #000;
+  padding: 8px 10px;
+  font-size: 1rem;
+}
+.add-custodian-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 175px;
+  margin-top: 18px;
+}
+.add-custodian-btn-primary {
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 22px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 10px #000;
+}
+.add-custodian-btn-primary:hover {
+  background: #02a5fc;
+  color: #fff;
+}
+.add-custodian-btn-cancel {
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 22px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 10px #000;
+}
+.add-custodian-btn-cancel:hover {
+  background: #000;
+  color: #fff;
+}

@@ -1,0 +1,420 @@
+/* --- Departments Page Styles (copied from Asset Acquisitions) --- */
+.departments-root {
+  padding: 24px;
+}
+
+.departments-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.departments-header span {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #393E46;
+}
+
+.departments-table-wrapper {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Modern Floating Action Button */
+.departments-fab {
+  position: fixed;
+  right: 36px;
+  bottom: 36px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #2196f3;
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.departments-fab:hover {
+  background: #1565c0;
+  box-shadow: 0 6px 16px rgba(33, 150, 243, 0.4);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .departments-root {
+    padding: 16px;
+  }
+  .departments-header {
+    margin-bottom: 20px;
+  }
+  .departments-header span {
+    font-size: 1.5rem;
+  }
+  .departments-table-wrapper {
+    padding: 16px;
+  }
+  .departments-fab {
+    right: 24px;
+    bottom: 24px;
+    width: 48px;
+    height: 48px;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .departments-root {
+    padding: 12px;
+  }
+  .departments-header span {
+    font-size: 1.3rem;
+  }
+  .departments-table-wrapper {
+    padding: 12px;
+  }
+  .departments-fab {
+    right: 16px;
+    bottom: 16px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+  }
+}
+/* Match Departments Management header to Asset Acquisitions header */
+.departments-title {
+  font-size: 1.8rem;
+  font-weight: 600 !important;
+  color: #393E46 !important;
+  font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+  font-style: normal;
+  letter-spacing: normal;
+  margin-bottom: 18px;
+  text-transform: none;
+}
+/* Personnel dropdown styles */
+.departments-personnel-dropdown {
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 4px;
+  padding: 6px 10px;
+  position: absolute;
+  z-index: 2;
+  min-width: 120px;
+  max-height: unset !important;
+  overflow: hidden !important;
+}
+.departments-personnel-dropdown-item {
+  padding: 2px 0;
+  font-size: 0.97em;
+  color: #232323;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background 0.15s;
+}
+.departments-personnel-dropdown-item:hover,
+.departments-personnel-dropdown-item:active {
+  background: #e3f2fd;
+}
+/* Match Asset Records Table Style for Personnel Assets Modal */
+.departments-personnel-assets-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.departments-personnel-assets-table th {
+  padding: 8px 10px;
+  font-size: 0.80rem;
+  background: #393e46;
+  color: #fff;
+  border-top: 3px solid #393e46;
+  border-bottom: 3px solid #393e46;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: left;
+}
+.departments-personnel-assets-table td {
+  padding: 1px 15px;
+  font-size: 0.8rem;
+  border-bottom: 1px solid #232323;
+  background: #fff;
+  color: #232323;
+}
+.departments-personnel-assets-table tr:last-child td {
+  border-bottom: none;
+}
+.departments-personnel-assets-table tr:hover {
+  background: #0003;
+}
+/*
+  Custom styles for Departments page (replacing MUI look)
+  - Use .departments-* className selectors in JSX
+  - Replicate MUI layout, spacing, color, font, and responsiveness
+*/
+
+.assets-root, .departments-root {
+  background: #fff !important;
+}
+
+.departments-root {
+  max-width: 1200px;
+  margin: 0;
+  padding: 24px;
+  color: #000;
+ 
+}
+.departments-title {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  color:black ;
+}
+.departments-header-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.departments-search-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.departments-search-input {
+  min-width: 200px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #000;
+  background: #fff;
+  color: #000;
+  font-size: 0.8rem;
+}
+.departments-filter-select {
+  min-width: 140px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #23293a;
+  background: #fff;
+  color: #000;
+  font-size: 0.8rem;
+}
+.departments-table-section {
+  background: #fff;
+  color:#000;
+  border-radius: 0px;
+  box-shadow: none !important;
+  width: 100%;
+  min-width: unset;
+  overflow-x: auto;
+  padding: 0 0 0 0;
+}
+.departments-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.departments-table-section {
+  background: #fff;
+  color:#000;
+  border-radius: 5px;
+  /* box-shadow removed */
+  padding: 0 0 0 0;
+}
+.departments-table-header th {
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: left;
+}
+.departments-table-body th, .departments-table-body td {
+  padding: 1px 15px;
+  font-size: 0.8rem;
+  border-bottom: 1px solid #232323;
+}
+.departments-table-body th {
+  font-weight: 700;
+  background: #181c24;
+}
+.departments-table-body tr:last-child td {
+  border-bottom: none;
+}
+.departments-table tr:hover {
+  background: #0003;
+}
+.departments-action-btn {
+  background: none;
+  border: none;
+  color: black;
+  width: auto;
+  height: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.departments-action-btn:hover {
+  background: none;
+}
+.departments-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(24, 28, 36, 0.55) !important; /* lighter overlay to match Asset Records modal style */
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.departments-modal {
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px 28px 24px 28px;
+  min-width: 340px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 4px 32px #000a;
+  color: #000;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.departments-modal-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.departments-modal-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.departments-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #e0e0e0;
+  color: #000;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1000;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.departments-modal-close:hover {
+  background: #fff;
+  color: #1976d2;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-color: #1976d2;
+}
+.departments-form-group {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.departments-form-group label {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.departments-form-group input,
+.departments-form-group select {
+  background: #fff;
+  border: 1px solid #444;
+  border-radius: 5px;
+  color: #000;
+  padding: 8px 10px;
+  font-size: 0.8rem;
+}
+.departments-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 190px;
+  margin-top: 18px;
+}
+.departments-btn-primary {
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 22px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 7px #000;
+}
+.departments-btn-primary:hover {
+  background: #02a5fc;
+  color: #fff;
+}
+.departments-btn-cancel {
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 22px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 7px #000;
+}
+.departments-btn-cancel:hover {
+  background: #181c24;
+  color: #fff;
+}
+.departments-fab {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #1976d2;
+  color: #fff;
+  font-size: 2.2rem;
+  border: none;
+  box-shadow: 0 4px 16px #000a;
+  cursor: pointer;
+  z-index: 10010;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+ 
+}
+.departments-fab:hover {
+  background: #1565c0;
+}
+@media (max-width: 600px) {
+  .departments-root {
+    padding: 12px 2px 64px 2px;
+  }
+  .departments-modal {
+    min-width: 90vw;
+    padding: 18px 6px 18px 6px;
+  }
+  .departments-table th, .departments-table td {
+    padding: 8px 4px;
+    font-size: 0.95rem;
+  }
+}
+/*table, th, td, tbody, tfoot, .table, .table-row, .table-header, .table-cell, .search-bar, .filter-bar, .filtering-bar, input[type="search"], input[type="text"], select {
+  background: #fff !important;
+  color: #000 !important;
+  border-color: #ccc !important;
+}
+*/

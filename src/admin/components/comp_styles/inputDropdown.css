@@ -1,0 +1,19 @@
+.input-dropdown-wrapper {
+  position: relative;
+  width: 100%;
+}
+.input-has-dropdown {
+  width: 100%;
+  box-sizing: border-box;
+  padding-right: 2em;
+}
+.input-dropdown-arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #888;
+  font-size: 1em;
+  z-index: 2;
+}
